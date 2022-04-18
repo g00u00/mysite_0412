@@ -1,8 +1,8 @@
 import datetime
 from django.shortcuts import render, redirect
-from .forms import CreateAbcForm
-from .models import Abc
 from django.http import HttpResponse
+from .models import Abc
+from .forms import CreateAbcForm
 
 
 # from django.urls import reverse
@@ -29,7 +29,7 @@ def list_main(request):
 
 
 def form_create(request):
-    # print('request.method: ', request.method )
+    print('request.method: ', request.method )
     if request.method == 'POST':
         form = CreateAbcForm(request.POST)
         if form.is_valid():
@@ -43,7 +43,7 @@ def form_create(request):
     context = {
         'form': form
     }
-    print(context)
+    print("context: ", context)
     return render(request, 'main/form_create.html', context)
 
 
