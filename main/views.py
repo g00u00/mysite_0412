@@ -29,7 +29,7 @@ def list_main(request):
 
 
 def form_create(request):
-    print('request.method: ', request.method )
+    print('request.method: ', request.method)
     if request.method == 'POST':
         form = CreateAbcForm(request.POST)
         if form.is_valid():
@@ -39,7 +39,7 @@ def form_create(request):
     else:
         print("else: ")
         form = CreateAbcForm()
-    print('form:',form)
+    print('form:', form)
     context = {
         'form': form
     }
@@ -52,14 +52,14 @@ def result(request):
     rows = Abc.objects.values_list()
 
     for row in rows:
-        list_main = [row[2],row[3],row[4]]
-        if (list_main[0] + list_main[1] == list_main[2]):
+        list_main = [row[2], row[3], row[4]]
+        if list_main[0] + list_main[1] == list_main[2]:
             result = "равна"
         else:
             result = "не равна"
         list_main.append(result)
         print('list_main: ', list_main)
-        task_main=list()
+        task_main = list()
         task_main.append(row[1])
 
     context = {'task_main': task_main, 'list_main': list_main}
