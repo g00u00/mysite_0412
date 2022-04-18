@@ -1,16 +1,18 @@
 # mysite_0412
 
-pip install Django	4.0.3
+git clone https://github.com/g00u00/mysite_0412.git
 
-asgiref==3.5.0
+cd mysite_0412
 
-Django==4.0.4
+python3 -m venv env
 
-django-widget-tweaks==1.4.12
+. env/bin/activate
 
-sqlparse==0.4.2
+pip install -r requirements.txt
 
-tzdata==2022.1
+python manage.py runserver 10.0.2.15:8000
+
+------------
 
 pip freeze > requirements.txt
 
