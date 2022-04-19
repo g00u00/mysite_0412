@@ -22,22 +22,21 @@
 
     <div class="card">
         <div class="card-body">
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="../../">mysite</a></li>
-                <li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
-            </ul>
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="../../main">main/</a></li>
-                <li class="nav-item"><a class="nav-link" href="../../main/list_main">main/list_main</a></li>
-                <li class="nav-item"><a class="nav-link" href="../../main/form_create">main/form_create</a></li>
-                <li class="nav-item"><a class="nav-link" href="../../main/result">main/result</a></li>
-                <li class="nav-item"><a class="nav-link" href="../../main/datetime_nov">main/datetime_nov</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'main:datetime_nov' %}">main/datetime_nov</a>
-                </li>
-                <li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
 
-
-            </ul>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link active" href="../../">mysite</a></li>
+                    <li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link active" href="../../main">main/</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../main/list_main">main/list_main</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../main/form_create">main/form_create</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../main/result">main/result</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../main/datetime_nov">main/datetime_nov</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'main:datetime_nov' %}">main/datetime_nov</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
+                </ul>
 
 
             {% block nav_second %}{% endblock %}
