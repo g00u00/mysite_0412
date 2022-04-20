@@ -60,16 +60,6 @@ def result(request):
 
 def table(request):
     rows = Abc.objects.values_list()
-    for row in rows:
-        list_main = [row[2], row[3], row[4]]
-        if list_main[0] + list_main[1] == list_main[2]:
-            result = "tравна"
-        else:
-            result = "tне равна"
-        list_main.append(result)
-        print('list_main_table: ', list_main)
-        task_main = list()
-        task_main.append(row[1])
     context = {'rows': rows}
     return render(request, 'main/table.html', context)
 
