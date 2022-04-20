@@ -45,7 +45,6 @@ def form_create(request):
 def result(request):
     # rows = Abc.objects.values_list()
     rows = Abc.objects.values_list()
-
     for row in rows:
         list_main = [row[2], row[3], row[4]]
         if list_main[0] + list_main[1] == list_main[2]:
@@ -53,12 +52,26 @@ def result(request):
         else:
             result = "не равна"
         list_main.append(result)
-        print('list_main: ', list_main)
+        print('list_main_result: ', list_main)
         task_main = list()
         task_main.append(row[1])
-
     context = {'task_main': task_main, 'list_main': list_main}
     return render(request, 'main/result.html', context)
+
+def table(request):
+    rows = Abc.objects.values_list()
+    for row in rows:
+        list_main = [row[2], row[3], row[4]]
+        if list_main[0] + list_main[1] == list_main[2]:
+            result = "tравна"
+        else:
+            result = "tне равна"
+        list_main.append(result)
+        print('list_main_table: ', list_main)
+        task_main = list()
+        task_main.append(row[1])
+    context = {'rows': rows}
+    return render(request, 'main/table.html', context)
 
 
 def datetime_nov(request):
