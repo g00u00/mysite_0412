@@ -4,12 +4,6 @@ from django.http import HttpResponse
 from .models import Abc
 from .forms import CreateAbcForm
 
-
-# from django.urls import reverse
-
-# def ind ex(request):
-#     return HttpResponse("main.views")
-
 def index(request):
     return render(request, 'main/index.html')
 
@@ -37,13 +31,14 @@ def form_create(request):
             print("form: ", form)
             return redirect('main:result')
     else:
-        print("else: ")
+        print("else:\n")
         form = CreateAbcForm()
-    print('form:', form)
+    print('form:\n', form)
+
     context = {
         'form': form
     }
-    print("context: ", context)
+    print("context:\n", context)
     return render(request, 'main/form_create.html', context)
 
 
