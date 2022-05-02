@@ -33,12 +33,12 @@ def form_create(request):
     else:
         print("else:\n")
         form = CreateAbcForm()
-    print('form:\n', form)
+    print('\nform:\n', form)
 
     context = {
         'form': form
     }
-    print("context:\n", context)
+    print("\ncontext:\n", context)
     return render(request, 'main/form_create.html', context)
 
 
