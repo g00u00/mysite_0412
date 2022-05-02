@@ -4,28 +4,32 @@
 {% block title %}title_index{% endblock %}
 
 
-
-
 {% block content %}
 <h5>content_main_result</h5>
 
-    <table class="table table-bordered">
-      <thead>
+<h6>
+    {% for item in task_main %}
+    {{ item }}
+    {% endfor %}
+</h6>
+
+<table class="table table-bordered">
+    <thead>
     <tr>
-      <th scope="col">A</th>
-      <th scope="col">B</th>
-      <th scope="col">C</th>
-      <th scope="col">Результат</th>
+        <th scope="col">A</th>
+        <th scope="col">B</th>
+        <th scope="col">C</th>
+        <th scope="col">Результат</th>
     </tr>
-  </thead>
+    </thead>
     <tbody>
     <tr>
         {% for item in list_main %}
-            <td>
-                {{ item }}
-            </td>
+        <td>
+            {{ item }}
+        </td>
         {% endfor %}
     </tr>
     <tbody>
-    </table>
+</table>
 {% endblock %}

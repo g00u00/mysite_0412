@@ -28,7 +28,7 @@ def form_create(request):
         form = CreateAbcForm(request.POST)
         if form.is_valid():
             form.save()
-            print("form: ", form)
+            print("\nform:\n", form)
             return redirect('main:result')
     else:
         print("else:\n")
@@ -52,9 +52,12 @@ def result(request):
         else:
             result = "не равна"
         list_main.append(result)
-        print('list_main_result: ', list_main)
         task_main = list()
         task_main.append(row[1])
+        print(row[1])
+        print('task_main:', task_main,end=' ')
+        print('list_main_result: ', list_main)
+
     context = {'task_main': task_main, 'list_main': list_main}
     return render(request, 'main/result.html', context)
 
