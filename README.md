@@ -2,6 +2,8 @@
 
 git clone https://github.com/g00u00/mysite_0412.git
 
+или
+
 git init
 
 git remote add origin git@github.com:g00u00/mysite_0412.git
