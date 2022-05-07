@@ -2,6 +2,12 @@
 
 git clone https://github.com/g00u00/mysite_0412.git
 
+git init
+
+git remote add origin git@github.com:g00u00/mysite_0412.git
+
+git pull origin main
+
 cd mysite_0412
 
 python3 -m venv env
