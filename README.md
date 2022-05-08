@@ -1,5 +1,7 @@
 # mysite_0412
 
+https://disk.yandex.ru/d/7cwUZfyJNgMvXQ
+
 su
 
 apt install python3.8-venv
