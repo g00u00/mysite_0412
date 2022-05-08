@@ -1,18 +1,14 @@
 {% extends '../mysite/base.html' %}
-{% load widget_tweaks %}
 
-{% block title %}title_index{% endblock %}
-
+{% block title %}main/result{% endblock %}
 
 {% block content %}
 <h5>content_main_result</h5>
-
 <h6>
     {% for item in task_main %}
     {{ item }}
     {% endfor %}
 </h6>
-
 <table class="table table-bordered">
     <thead>
     <tr>

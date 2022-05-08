@@ -1,5 +1,4 @@
 {% extends '../mysite/base.html' %}
-{% load widget_tweaks %}
 
 {% block title %}title_index{% endblock %}
 
@@ -16,7 +15,6 @@
 
 <br>list_main<br>
 <br>{{list_main}}
-<br>
 {% for i in list_main %}
 {{ i }}
 {% endfor %}
@@ -26,11 +24,7 @@
 {{ dict_main}}
 <br>{{ dict_main.x }}
 <br>{{ dict_main.y }}
-<br>{% for key in dict_main.keys %}
-<br>{{ key }}
-{{ dict_main.values }}
-{#        {{ dict_main.get(key) }}#}
+{% for key, value in dict_main.items  %}
+<br>{{ key }} - {{value}}
 {% endfor %}
-
-
 {% endblock %}
