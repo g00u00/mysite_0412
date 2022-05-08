@@ -1,5 +1,7 @@
 # mysite_0412
 
+# !!! не изменять
+
 https://disk.yandex.ru/d/7cwUZfyJNgMvXQ
 
 su
