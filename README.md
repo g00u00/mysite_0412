@@ -1,5 +1,12 @@
 # mysite_0412
 
+su
+
+apt install python3.8-venv
+
+exit
+
+
 git clone https://github.com/g00u00/mysite_0412.git
 
 или
