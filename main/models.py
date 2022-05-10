@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Abc(models.Model):
-    task = models.CharField(default="Ровна ли С сумме A и B ?", max_length=256)
+    task = models.CharField(default="Равна ли С сумме A и B ?", max_length=256)
     a = models.IntegerField(default=0)
     b = models.IntegerField(default=0)
     c = models.IntegerField(default=0)
