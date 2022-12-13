@@ -14,6 +14,8 @@ cd mysite_0412
 
 или
 
+mkdir mysite_0412
+
 git init
 
 git remote add origin git@github.com:g00u00/mysite_0412.git
@@ -35,7 +37,7 @@ python3 -m venv env
 
 deactivate
 
-Для Windows env: 
+### Для Windows env: 
 
 python -m venv env
 
