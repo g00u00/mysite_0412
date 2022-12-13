@@ -4,11 +4,7 @@
 
 https://disk.yandex.ru/d/7cwUZfyJNgMvXQ
 
-su
 
-apt install python3.8-venv
-
-exit
 
 ### git
 
@@ -26,6 +22,12 @@ git pull origin main
 
 
 ### Для не Windows env
+
+su
+
+apt install python3.8-venv
+
+exit
 
 python3 -m venv env
 
@@ -67,4 +69,3 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 
 --------------------
-
