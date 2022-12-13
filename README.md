@@ -1,6 +1,6 @@
-# mysite_0412
+### mysite_0412
 
-# !!! не изменять
+### !!! не изменять
 
 https://disk.yandex.ru/d/7cwUZfyJNgMvXQ
 
@@ -10,8 +10,11 @@ apt install python3.8-venv
 
 exit
 
+### git
 
 git clone https://github.com/g00u00/mysite_0412.git
+
+cd mysite_0412
 
 или
 
@@ -21,19 +24,22 @@ git remote add origin git@github.com:g00u00/mysite_0412.git
 
 git pull origin main
 
-cd mysite_0412
 
-Для не Windows
+### Для не Windows env
 
 python3 -m venv env
 
 . env/bin/activate
 
-Для Windows: 
+deactivate
+
+Для Windows env: 
 
 python -m venv env
 
 env\Scripts\activate
+
+deactivate
 
 https://medium.com/@ph1l74/python-venv-%D0%BD%D0%B0-windows-10-2118ad685b1 
 
@@ -41,6 +47,7 @@ https://wiki.iphoster.net/wiki/Windows_10_-_%D0%BA%D0%B0%D0%BA_%D0%BF%D0%BE%D1%8
 
 https://python.land/virtual-environments/virtualenv
 
+### Конфигурирование и запуск 
 
 pip install -r requirements.txt
 
@@ -48,10 +55,9 @@ python manage.py runserver 10.0.2.15:8000
 
 admin root root
 
-deactivate
-
 ------------
 
+### Редирект порта для сервера
 iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8000
 
 -------------=
