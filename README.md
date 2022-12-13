@@ -23,11 +23,17 @@ git pull origin main
 
 cd mysite_0412
 
+Для не Windows
+
 python3 -m venv env
 
 . env/bin/activate
 
 Для Windows: 
+
+python -m venv env
+
+env\Scripts\activate
 
 https://medium.com/@ph1l74/python-venv-%D0%BD%D0%B0-windows-10-2118ad685b1 
 
